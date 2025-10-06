@@ -6,8 +6,10 @@
 
 La page d'accueil permet de créer un Joueur (nom, niveau).
 Il faut ensuite choisir entre créer une partie ou rejoindre une partie existante.
-Problématiques : Envoyer l'objet joueur au backend ainsi que rediriger vers la page attente de joueur ou la page rejoindre un joueur.
-
+Problématiques :
+- Envoyer l'objet joueur au backend ainsi que rediriger vers la page attente de joueur ou la page rejoindre un joueur.
+- Vérification que le code entré correspond bien à une partie existante.
+- Mise à jour de la liste des joueurs en temps réel.
 ### Page d'attente de joueurs
 
 Page pour l'attente d'un joueur qui a créé une partie, la liste des joueurs rejoignant la partie doit être affichée.
@@ -16,14 +18,6 @@ Problématiques :
 - Retour à la page d'accueil possible + annulation de la partie
 - Récupérer la liste des joueurs depuis le backend et mettre à jour la liste en temps réel.
 - Gérer le bouton "Démarrer la partie" qui doit être activé uniquement lorsque le nombre minimum de joueurs est atteint.
-
-### Page de rejoindre une partie
-
-Page qui propose de rentrer le code de la partie à rejoindre.
-Problématiques :
-- Retour à la page d'accueil possible.
-- Vérification que le code entré correspond bien à une partie existante.
-- Mise à jour de la liste des joueurs en temps réel.
 
 ###  Page de jeu
 

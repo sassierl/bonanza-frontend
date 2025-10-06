@@ -4,8 +4,6 @@
 
 `/lobby` : Page d'attente des joueurs avant le début de la partie.
 
-`/join` : Page pour rejoindre une partie existante en entrant un code.
-
 `/game` : Page principale du jeu où se déroule la partie.
 
 `/results` : Page affichant les résultats de la partie et proposant de redémarrer.
