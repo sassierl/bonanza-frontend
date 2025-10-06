@@ -7,16 +7,28 @@ export default function Page() {
   const [role, setRole] = useState("player");
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("User:", username, "Role:", role);
-    // plus tard → envoi au backend
-    postMessage("user-joined", { username, role });
+
     if (!username.trim()) {
       alert("Please enter a username");
       return;
     }
-    router.push(`/game`);
+
+    try {
+      const response = await fetch("http://localhost:3001/api/players", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: username }),
+      });
+
+      const data = await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+    router.push("/game");
   };
 
   return (
