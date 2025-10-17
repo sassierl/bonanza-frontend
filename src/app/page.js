@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import FormInput from "../components/FromInput";
 
 export default function Page() {
   const [username, setUsername] = useState("");
@@ -36,15 +37,12 @@ export default function Page() {
       <h1>Welcome to Bonanza</h1>
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Enter your name"
-          />
-        </div>
+        <FormInput
+          label="Username:"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter your username"
+        />
 
         <div>
           <label>Choose your level or role:</label>
