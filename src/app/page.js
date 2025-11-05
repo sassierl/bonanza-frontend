@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import FormInput from "../components/FromInput";
+import FormSelect from "../components/FormSelect";
+import Header from "../components/Header";
 
 export default function Page() {
   const [username, setUsername] = useState("");
@@ -34,6 +36,7 @@ export default function Page() {
 
   return (
     <div style={{ padding: "20px" }}>
+      <Header />
       <h1>Welcome to Bonanza</h1>
 
       <form onSubmit={handleSubmit}>
@@ -43,15 +46,16 @@ export default function Page() {
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter your username"
         />
-
-        <div>
-          <label>Choose your level or role:</label>
-          <select value={role} onChange={(e) => setRole(e.target.value)}>
-            <option value="expert">Expert</option>
-            <option value="beginner">Beginner</option>
-            <option value="spectator">Spectator</option>
-          </select>
-        </div>
+        <FormSelect
+          label="Choose your level or role:"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+          options={[
+            { value: "expert", label: "Expert" },
+            { value: "beginner", label: "Beginner" },
+            { value: "spectator", label: "Spectator" },
+          ]}
+        />
 
         <button type="submit">Start</button>
       </form>
