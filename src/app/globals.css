@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-bonanza-green: #3a9d23;
+  --color-bonanza-yellow: #f8d24a;
+  --color-bonanza-brown: #8b4513;
+  --color-bonanza-dark-brown: #5d3527;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

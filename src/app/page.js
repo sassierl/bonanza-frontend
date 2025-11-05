@@ -35,7 +35,7 @@ export default function Page() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div>
       <Header />
       <h1>Welcome to Bonanza</h1>
 
