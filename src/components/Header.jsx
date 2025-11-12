@@ -1,8 +1,8 @@
 export default function Header() {
   return (
-    <div className="bg-bonanza-dark-brown shadow">
-      <div className="flex h-11 items-center justify-between gap-8 px-4 sm:px-6">
-        <h1 className="text-lg font-bold text-white">Bonanza Game</h1>
+    <div className="header">
+      <div className="header__container">
+        <h1 className="header__title">Bonanza Game</h1>
       </div>
     </div>
   );
