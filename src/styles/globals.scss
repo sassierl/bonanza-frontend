@@ -1,12 +1,13 @@
-$background-light: #ffffff;
-$foreground-light: #171717;
-$background-dark: #0a0a0a;
-$foreground-dark: #ededed;
+// Components
+@use 'components/form-select';
+@use 'components/header';
+@use 'components/form-input';
+@use 'components/footer';
+@use 'variables' as *;
 
-$bonanza-green: #3a9d23;
-$bonanza-yellow: #f8d24a;
-$bonanza-brown: #8b4513;
-$bonanza-dark-brown: #5d3527;
+// Pages
+@use 'pages/home';
+
 
 :root {
   --background: #{$background-light};
@@ -29,8 +30,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-// Components
-@import 'components/form-select';
-@import 'components/header';
-@import 'components/form-input';

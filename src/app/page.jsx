@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import FormInput from "../components/FromInput";
 import FormSelect from "../components/FormSelect";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Page() {
   const [username, setUsername] = useState("");
@@ -37,10 +38,10 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1>Welcome to Bonanza</h1>
-        <div className="bg-bonanza-yellow px-30 py-8 rounded-lg shadow-md w-full max-w-md">
-          <form onSubmit={handleSubmit} className="flex flex-col">
+      <div className="home__container">
+        <h1 className="home__title">Welcome to Bonanza</h1>
+        <div className="home__card">
+          <form onSubmit={handleSubmit} className="home__form">
             <FormInput
               label="Username:"
               value={username}
@@ -58,11 +59,13 @@ export default function Page() {
               ]}
             />
 
-
-            <button type="submit">Start</button>
+            <button type="submit" className="home__button">
+              Start
+            </button>
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
