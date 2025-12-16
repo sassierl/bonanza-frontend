@@ -1,0 +1,21 @@
+.form-select {
+  &__label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151; // gray-700
+  }
+
+  &__select {
+    width: 100%;
+    border: 1px solid #d1d5db; // gray-300
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.5); // grey-500
+    }
+  }
+}
